@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Browser Info Simulation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body>
+
+<div class="header">
+    <h1> Browser Info Simulation </h1>
+</div>
+<div class="row">
+<!-- start column 1-->
+  <div class="column">
+  <div id="divselect"> <center><b class="pin">User Input</b></center><br />
+<form action="" method="get"><table class="vip"><tbody>
+<tr><td>Browser Name</td><td><select  id="browser"><option>Select Syntax</option><option value="appName">navigator.appName</option></select></td><td><div class="btn" onClick="fgiet()">Submit</div></td></tr>
+<tr><td>App Code Name</td><td><select  id="appcodename"><option>Select Syntax</option><option value="appCodeName">navigator.appCodeName</option></select></td><td><div class="btn" onClick="fgiet()">Submit</div></td></tr>
+<tr><td>Language</td><td><select  id="lang"><option>Select Syntax</option><option value="applng">navigator.language</option></select></td><td><div class="btn" onClick="fgiet()">Submit</div></td></tr>
+<tr><td>App Version</td><td><select id="version"><option>Select Syntax</option><option value="appVersion">navigator.appVersion</option></select></td><td><div class="btn" onClick="fgiet()">Submit</div></td></tr>
+<tr><td>Platform</td><td><select  id="platform"><option>Select Syntax</option><option value="platform">navigator.platform</option></select></td><td><div class="btn" onClick="fgiet()">Submit</div></td></tr>
+<tr><td>Cookies Enabled</td><td><select  id="cookie"><option>Select Syntax</option><option value="cookie">navigator.cookieEnabled</option></td></select><td><div class="btn" onClick="fgiet()">Submit</div></td></tr>
+<tr><td>User Agent</td><td><select id="agent"><option>Select Syntax</option><option value="userAgent">navigator.userAgent</option></select></td><td><div class="btn" onClick="fgiet()">Submit</div></td></tr>
+
+<tr>
+<td colspan="3"><center>
+ <div style="background: #10754D; cursor: pointer; color: #fff; padding: 8px; border-radius: 5px; margin: 10px 10px;" onClick="fgiet()">Check All</div>
+</center>
+</td> </tr></tbody>
+</table></form>
+ <b class="pin">(Kindly Choose the syntax for browser information.)</b><br/>
+<br/>
+<h1>Assignment</h1>
+  
+  
+  <section>
+   <form name="fgietkinghcoders" action="" >
+     <strong>1. In which HTML element do we put in JavaScript code?</strong><br>
+     <div class="opt"> <input type="radio" name="q1" value="a" id="q1a">a. &lt;js&gt;<br>
+      <input type="radio" name="q1" value="b" id="q1b">b. &lt;script&gt;<br>
+      <input type="radio" name="q1" value="c" id="q1c">c. &lt;body&gt;<br>
+      <input type="radio" name="q1" value="d" id="q1d">d. &lt;link&gt;<br></div><br>
+ <strong>2. How would you write "Hello" in an alert box?</strong><br>
+    <div class="opt">  <input type="radio" name="q2" value="a" id="q2a">a. msg("Hello");<br>
+      <input type="radio" name="q2" value="b" id="q2b">b. alertBox("Hello");<br>
+      <input type="radio" name="q2" value="c" id="q2c">c. document.write("Hello");<br>
+      <input type="radio" name="q2" value="d" id="q2d">d. alert("Hello");<br></div><br>
+
+    <strong>3. navigator.appName  is to show </strong><br>
+      <div class="opt"><input type="radio" name="q3" value="a" id="q3a">a. Language<br>
+      <input type="radio" name="q3" value="b" id="q3b">b. Version<br>
+      <input type="radio" name="q3" value="c" id="q3c">c. Browser<br>
+      <input type="radio" name="q3" value="d" id="q3d">d. Cookie<br>
+</div><br>
+     
+<strong>4. A variable in JavaScript must start with which special character</strong><br>
+    <div class="opt">  <input type="radio" name="q4" value="a" id="q4a">a. @<br>
+      <input type="radio" name="q4" value="b" id="q4b">b. $<br>
+      <input type="radio" name="q4" value="c" id="q4c">c. #<br>
+      <input type="radio" name="q4" value="d" id="q4d">d. No Special Character<br></div><br>
+      <strong>5. Browser's user agent string helps identify </strong><br>
+    <div class="opt"> 
+     <input type="radio" name="q5" value="a" id="q5a">a. Which browser is being used <br>
+      <input type="radio" name="q5" value="b" id="q5b">b. What version<br>
+      <input type="radio" name="q5" value="c" id="q5c">c. On which Operating System<br>
+      <input type="radio" name="q5" value="d" id="q5d">d. All the above<br></div>
+      
+       <center> <input type="submit" class="btn" value="Submit Test"></center></form>
+    <div id="result"></div>
+  </section>
+
+
+
+<br/><br/><br/><br/>
+
+   </div>
+    </div>
+    <!-- End column 1-->
+  <!-- start column 2-->
+  <div class="column">
+   
+   <div id="divselect">
+
+    <center>  <b class="pin">Source Code</b></center>
+  <!-- start code container-->
+  <div id="codecontain">
+ &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;<br />
+&lt;title&gt;Browser Info Simulation&lt;/title&gt;<br />
+&lt;meta charset="utf-8"&gt;<br />
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br />
+&lt;script&gt;<br />
+
+
+//start function<br />
+<br />
+function fgiet() {
+    <br />
+    //get user input
+    <br />
+var binfo=document.getElementById('browser').value;<br />
+var appcodeinfo=document.getElementById('appcodename').value;<br />
+var lnginfo=document.getElementById('lang').value;<br />
+var verinfo=document.getElementById('version').value;<br />
+var platforminfo=document.getElementById('platform').value; <br />
+var cookiinfo=document.getElementById('cookie').value; <br />
+var agentinfo=document.getElementById('agent').value; <br />
+
+  
+<br />
+//verify user input<br />
+if(binfo=="appName"){<br />
+
+ //browser name
+ <div id="hidecode1">  document.getElementById('showinfo1').innerHTML=""+navigator.appName  + ""; </div>
+ 
+}
+
+<br /><br />
+if(appcodeinfo=="appCodeName"){<br />
+ //Appcode Name <br />
+   <div id="hidecode2">  document.getElementById('showinfo2').innerHTML=""+ navigator.appCodeName + ""; </div>
+ 
+
+}
+<br /><br />
+if(lnginfo=="applng"){<br />
+    //Browser Language <br />
+     <div id="hidecode3">  document.getElementById('showinfo3').innerHTML="" +navigator.language  +""; </div>
+    
+}<br /><br />
+if(verinfo=="appVersion"){
+    <br />
+    //Browser Version<br />
+      <div id="hidecode4"> document.getElementById('showinfo4').innerHTML="" +navigator.appVersion  +""; </div>
+    
+}<br /><br />
+if(platforminfo=="platform"){<br />
+    //Platform <br />
+        <div id="hidecode5"> document.getElementById('showinfo5').innerHTML="" +navigator.platform  +""; </div> 
+    <br />
+    
+}<br /><br />
+if(cookiinfo=="cookie"){
+    <br />//Browser Cookie <br />
+       <div id="hidecode6">  document.getElementById('showinfo6').innerHTML="" +navigator.cookieEnabled  +""; </div>
+    
+    
+}<br /><br />
+if(agentinfo=="userAgent"){<br />
+//Browser User Agent <br />
+       <div id="hidecode7">  document.getElementById('showinfo7').innerHTML="" +navigator.userAgent  +""; </div>
+    
+}<br />
+
+}<br />
+//end function
+
+
+&lt;/script&gt;<br />
+&lt;style&gt;
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the header */
+.header {
+ background-color: transparent;
+  padding: 5px;
+  text-align: center;
+}
+
+
+/* Create three equal columns that floats */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+
+}
+
+	body{
+		background:linear-gradient(90deg,#0162c8,#55e7fc);
+	}
+	h1{
+		text-align: center;
+		color:#f0f0f0;
+		font-family: 'Baloo Bhai', cursive;
+		margin-top: 5px;
+	}
+    	h2{
+		text-align: center;
+		color:#f0f0f0;
+	font-size: 25px;
+    	font-family: MingLiU-ExtB;
+        	margin-bottom: 10px;
+          
+	}
+     h3 {
+        font-size: 18px;
+     
+    }
+
+	b{
+		color:#0162c8;
+		font-size: 30px;
+	}
+	strong{
+		color:#fff; 
+	}
+    
+	select{
+	
+		font-size:15px;
+	}
+
+	table{
+		text-align: center;
+	}
+	select{
+		border-radius: 20px;
+		color:voilet;
+		text-align:center;
+		padding-left:auto;
+         width:100%;   
+	}
+
+
+    /*user input/code /output  background */
+    #divselect {
+        
+  border-radius: 25px;
+  background: #D35400;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+ /*code blockbackground */
+    #codecontain {
+        
+       white-space: nowrap; 
+  padding-right: 9px;
+ overflow: auto;
+  text-overflow: "down"; 
+   border-left: 5px solid green;
+  background: white;
+ margin: 5px;
+  width: 100%;
+  height: 100%;
+  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+}
+/*table*/
+table.vip th, table.vip td {
+    text-align: center;
+}
+
+table.vip thead {
+    line-height: 12px;
+    background: #2e63e7;
+    text-transform: uppercase;
+}
+
+table.vip thead th {
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 1px;
+    vertical-align: bottom;
+}
+
+table.vip thead th:nth-child(1) {
+    width: 20%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+table.vip thead th:nth-child(2) {
+    width: 30%;
+}
+
+table.vip thead th:nth-child(3) {
+    width: 35%;
+}
+
+table.vip thead th:nth-child(4) {
+    width: 15%;
+}
+
+table.vip tbody {
+    font-size: 1em;
+    line-height: 15px;
+}
+
+table.vip tbody tr {
+    border-top: 2px solid rgba(109, 176, 231, 0.8);
+    transition: background 0.6s, color 0.6s;
+}
+
+table.vip tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+table.vip tbody tr:hover {
+    color: #000;
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: 900;
+}
+
+table.vip tbody td {
+    padding: 12px;
+}
+
+table.vip tbody tr:hover td:first-child {
+    background: rgba(0,0,0,0);
+}
+
+table.vip tbody td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+    background: rgba(109, 176, 231, 0.35);
+    transition: backgrounf 0.6s;
+}
+
+table.vip tfoot {
+    font-size: 0.8em;
+}
+
+table.vip tfoot tr {
+    border-top: 2px solid #2e63e7;
+}
+
+table.vip tfoot td {
+    color: rgba(255,255,215,0.6);
+    text-align: left;
+    line-height: 15px;
+    padding: 15px 20px;
+}
+
+
+/* Mobile Layout */
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 34px;
+        line-height: 36px;
+        padding-left: 15px;
+    }
+
+    table.vip {
+        font-size: 0.8em;
+    }
+}
+
+
+/*card style*/
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height:114px;
+   margin: 4px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+b{color: #411;
+  font-family: Consolas, Courier, monospace;
+  font-size: 20px;
+  text-shadow: 0 0 15px #411;
+  height: 100%;
+  }
+  
+  	.pin{
+		color: white;
+  font-family: Consolas, Courier, monospace;
+  font-size: 20px;
+  text-shadow: 0 0 15px #411;
+  height: 100%;}
+	
+  textarea {
+    border: none;
+     background-color:black;
+      color: white;
+       width: 100%;
+        text-align: center;
+       }
+/*button*/
+.btn{
+    background: #10754D;
+     cursor: pointer;
+      color: #fff;
+       padding: 8px;
+        border-radius: 5px;
+         margin: 2px 2px;
+}
+
+.btn:hover{
+     color: black;
+     background-color:slateblue;
+     color: #fff;
+}
+/*blink code */
+@keyframes blinking {
+  0%{
+    background-color: #ff3d50;
+    color: #ddd;
+  }
+  100%{
+    background-color: #222291;
+    color: #fff;
+  }
+}
+/*blink container*/
+#hidecode1,#hidecode2,#hidecode3,#hidecode4,#hidecode5,#hidecode6,#hidecode7{
+      
+       white-space: nowrap; 
+  padding-right: 9px;
+ overflow: auto;
+  text-overflow: "---"; 
+   border-left: 5px solid green;
+width: 100%;
+  height: 100%;
+  padding: 5px;
+  
+  animation: blinking 1s infinite;
+}
+
+[id=result] {
+  margin-top: 1rem;
+}
+
+[id=result] h3 {
+  background: #EEE4E1;
+  padding: 10px;
+  margin: 10px 0;
+  color: #000;
+}
+strong{
+    color: white;
+     font-family: Consolas, Courier, monospace;
+  font-size: 16px;
+  text-shadow: 0 0 15px #411;
+  height: 100%;
+}
+.opt{
+color: white;
+  font-family: Consolas, Courier, monospace;
+  font-size: 14px;
+  text-shadow: 0 0 15px #411;
+  height: 100%;}
+
+
+&lt;/style&gt;
+
+
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+
+&lt;div class="header"&gt;<br />
+    &lt;h1&gt; Browser Info Simulation &lt;/h1&gt;<br />
+&lt;/div&gt;<br />
+
+
+
+&lt;div class="row"&gt;<br />
+
+&lt;!-- start column 1--&gt;<br />
+  &lt;div class="column"&gt;<br />
+  &lt;div id="divselect"&gt;&lt;h2&gt;User Input&lt;/h2&gt;&lt;br /&gt;<br />
+&lt;form action="" method="get"&gt;&lt;table class="vip"&gt;&lt;tbody&gt;<br />
+&lt;tr&gt;&lt;td&gt;Browser Name&lt;/td&gt;<br />
+&lt;td&gt;&lt;select  id="browser"&gt;&lt;option&gt;Select Syntax&lt;/option&gt;&lt;option value="appName"&gt;navigator.appName&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;<br />
+&lt;td&gt;&lt;div class="btn" onClick="fgiet()"&gt;Submit&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;App Code Name&lt;/td&gt;<br />
+&lt;td&gt;&lt;select  id="appcodename"&gt;&lt;option&gt;Select Syntax&lt;/option&gt;&lt;option value="appCodeName"&gt;navigator.appCodeName&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;<br />
+&lt;td&gt;&lt;div class="btn" onClick="fgiet()"&gt;Submit&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;Language&lt;/td&gt;<br />
+&lt;td&gt;&lt;select  id="lang"&gt;&lt;option&gt;Select Syntax&lt;/option&gt;&lt;option value="applng"&gt;navigator.language&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;<br />
+&lt;td&gt;&lt;div class="btn" onClick="fgiet()"&gt;Submit&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;App Version&lt;/td&gt;<br />
+&lt;td&gt;&lt;select id="version"&gt;&lt;option&gt;Select Syntax&lt;/option&gt;&lt;option value="appVersion"&gt;navigator.appVersion&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;<br />
+&lt;td&gt;&lt;div class="btn" onClick="fgiet()"&gt;Submit&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;Platform&lt;/td&gt;<br />
+&lt;td&gt;&lt;select  id="platform"&gt;&lt;option&gt;Select Syntax&lt;/option&gt;&lt;option value="platform"&gt;navigator.platform&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;<br />
+&lt;td&gt;&lt;div class="btn" onClick="fgiet()"&gt;Submit&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;Cookies Enabled&lt;/td&gt;<br />
+&lt;td&gt;&lt;select  id="cookie"&gt;&lt;option&gt;Select Syntax&lt;/option&gt;&lt;option value="cookie"&gt;navigator.cookieEnabled&lt;/option&gt;&lt;/td&gt;&lt;/select&gt;&lt;td&gt;<br />
+&lt;div class="btn" onClick="fgiet()"&gt;Submit&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;User Agent&lt;/td&gt;<br />
+&lt;td&gt;&lt;select id="agent"&gt;&lt;option&gt;Select Syntax&lt;/option&gt;&lt;option value="userAgent"&gt;navigator.userAgent&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;<br />
+&lt;td&gt;&lt;div class="btn" onClick="fgiet()"&gt;Submit&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+
+&lt;tr&gt;<br />
+&lt;td colspan="3"&gt;&lt;center&gt;<br />
+ &lt;div style="background: #10754D; cursor: pointer; color: #fff; padding: 8px; border-radius: 5px; margin: 10px 10px;" onClick="fgiet()"&gt;Check All&lt;/div&gt;<br />
+&lt;/center&gt;<br />
+&lt;/td&gt; &lt;/tr&gt;&lt;/tbody&gt;<br />
+&lt;/table&gt;&lt;/form&gt;<br />
+ &lt;b class="pin"&gt;(Kindly Choose the syntax for browser information.)&lt;/b&gt;&lt;br/&gt;<br />
+
+   &lt;/div&gt;<br />
+&lt;/div&gt;<br />
+    &lt;!-- End column 1--&gt;<br />
+ 
+  &lt;!-- start column 2--&gt;<br />
+  &lt;div class="column"&gt;<br />
+        
+&lt;!-- info section --&gt;<br />
+&lt;div id="divselect"&gt;<br />
+    &lt;center&gt;
+&lt;h2&gt;Browser Info Output&lt;/h2&gt;&lt;b class="pin"&gt;(Hover for HTML source code.)&lt;/b&gt;&lt;br/&gt;&lt;br /&gt;<br />
+    &lt;/center&gt;<br />
+
+&lt;!-- info 1--&gt;<br />
+&lt;div class='flip-card'&gt;
+&lt;div class='flip-card-inner'&gt; <br />
+&lt;div class='flip-card-front'&gt;&lt;b class="pin"&gt;Browser&lt;/b&gt;&lt;br/&gt;&lt;div id="showinfo1"&gt; &lt;/div&gt;&lt;/div&gt;<br />
+&lt;div class='flip-card-back'&gt; <br />
+&lt;b class="pin"&gt;Source Code&lt;/b&gt;&lt;br&gt;<br />
+&lt;br /&gt; &lt;br /&gt; <br />
+ &lt;textarea readonly="readonly"&gt;<br />
+    HTML code : &lt;div id="showinfo1"&gt; &lt;/div&gt;<br />
+&lt;/textarea&gt;<br />
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+&lt;!--End info 1 --&gt;
+&lt;!-- info 2--&gt;<br />
+&lt;div class='flip-card'&gt;
+&lt;div class='flip-card-inner'&gt; <br />
+&lt;div class='flip-card-front'&gt;&lt;b class="pin"&gt;App Code Name&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id="showinfo2"&gt; &lt;/div&gt;&lt;/div&gt;<br />
+&lt;div class='flip-card-back'&gt; 
+&lt;b class="pin"&gt;Source Code&lt;/b&gt;&lt;br&gt;<br />
+&lt;br /&gt; &lt;br /&gt; <br />
+ &lt;textarea readonly="readonly"&gt;<br />
+    HTML code : &lt;div id="showinfo2"&gt; &lt;/div&gt;<br />
+&lt;/textarea&gt;<br />
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+&lt;!--End info 2 --&gt;<br />
+&lt;!-- info 3--&gt;<br />
+&lt;div class='flip-card'&gt;
+&lt;div class='flip-card-inner'&gt; <br />
+&lt;div class='flip-card-front'&gt;&lt;b class="pin"&gt;Language&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id="showinfo3"&gt; &lt;/div&gt;&lt;/div&gt;<br />
+&lt;div class='flip-card-back'&gt; 
+&lt;b class="pin"&gt;Source Code&lt;/b&gt;&lt;br&gt;<br />
+&lt;br /&gt; &lt;br /&gt; <br />
+ &lt;textarea readonly="readonly"&gt;
+    HTML code : &lt;div id="showinfo3"&gt; &lt;/div&gt;<br />
+&lt;/textarea&gt;<br />
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+&lt;!--End info 3 --&gt;<br />
+&lt;!-- info 4--&gt;
+&lt;div class='flip-card'&gt;<br />
+&lt;div class='flip-card-inner'&gt; <br />
+&lt;div class='flip-card-front'&gt;&lt;b  class="pin"&gt;App Version&lt;/b&gt;&lt;div id="showinfo4"&gt; &lt;/div&gt;&lt;/div&gt;<br />
+&lt;div class='flip-card-back'&gt; <br />
+&lt;b class="pin"&gt;Source Code&lt;/b&gt;&lt;br&gt;&lt;br /&gt; <br />
+ &lt;textarea readonly="readonly"&gt;<br />
+    HTML code : &lt;div id="showinfo4"&gt; &lt;/div&gt;
+&lt;/textarea&gt;<br />
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+&lt;!--End info 4 --&gt;
+&lt;!-- info 5--&gt;<br />
+&lt;div class='flip-card'&gt;
+&lt;div class='flip-card-inner'&gt; <br />
+&lt;div class='flip-card-front'&gt;&lt;b class="pin"&gt;Platform&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id="showinfo5"&gt; &lt;/div&gt;&lt;/div&gt;<br />
+&lt;div class='flip-card-back'&gt; 
+&lt;b class="pin"&gt;Source Code&lt;/b&gt;&lt;br&gt;<br />
+ &lt;br /&gt; &lt;br /&gt; <br />
+ &lt;textarea readonly="readonly"&gt;<br />
+    HTML code : &lt;div id="showinfo5"&gt; &lt;/div&gt;<br />
+&lt;/textarea&gt;<br />
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+&lt;!--End info 5 --&gt;<br />
+&lt;!-- info 6--&gt;<br />
+&lt;div class='flip-card'&gt;<br />
+&lt;div class='flip-card-inner'&gt; <br />
+&lt;div class='flip-card-front'&gt;&lt;b class="pin"&gt;Cookies Enabled&lt;/b&gt;&lt;br/&gt;&lt;div id="showinfo6"&gt; &lt;/div&gt;&lt;/div&gt;<br />
+&lt;div class='flip-card-back'&gt; 
+&lt;b class="pin"&gt;Source Code&lt;/b&gt;&lt;br&gt;<br />
+&lt;br /&gt; &lt;br /&gt; <br />
+ &lt;textarea readonly="readonly"&gt;<br />
+    HTML code : &lt;div id="showinfo6"&gt; &lt;/div&gt;<br />
+&lt;/textarea&gt;<br />
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+&lt;!--End info 6 --&gt;
+&lt;!-- info 7--&gt;<br />
+&lt;div class='flip-card'&gt;
+&lt;div class='flip-card-inner'&gt; <br />
+&lt;div class='flip-card-front'&gt;&lt;b class="pin"&gt;User Agent&lt;/b&gt;&lt;div id="showinfo7"&gt; &lt;/div&gt;&lt;/div&gt;<br />
+&lt;div class='flip-card-back'&gt; 
+&lt;b class="pin"&gt;Source Code&lt;/b&gt;&lt;br&gt;<br />
+&lt;br /&gt; &lt;br /&gt; 
+ &lt;textarea readonly="readonly"&gt;<br />
+       HTML code : &lt;div id="showinfo7"&gt; &lt;/div&gt;<br />
+&lt;/textarea&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br /&gt;<br />
+&lt;!--End info 7 --&gt;<br />
+ &lt;!-- End info section --&gt;<br />
+ &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;<br />
+&lt;!-- end column 2--&gt;<br />
+&lt;/div&gt;<br />
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+ <!-- End code container-->
+   </div>
+   </div>
+  <!-- End column 2 -->
+  <!-- start column 3-->
+  <div class="column">
+        
+<!-- info section -->
+<div id="divselect">
+    <center>
+<h2>Browser Info Output</h2><b class="pin">(Hover for HTML source code.)</b><br/><br />
+    </center>
+
+<!-- info 1-->
+<div class='flip-card'>
+<div class='flip-card-inner'> 
+<div class='flip-card-front'><b class="pin">Browser</b><br/><div id="showinfo1"> </div></div>
+<div class='flip-card-back'> 
+<b class="pin">Source Code</b><br>
+<br /> <br /> 
+ <textarea readonly="readonly">
+    HTML code : <div id="showinfo1"> </div>
+</textarea>
+</div></div></div>
+<!--End info 1 -->
+<!-- info 2-->
+<div class='flip-card'>
+<div class='flip-card-inner'> 
+<div class='flip-card-front'><b class="pin">App Code Name</b><br/><br/><div id="showinfo2"> </div></div>
+<div class='flip-card-back'> 
+<b class="pin">Source Code</b><br>
+<br /> <br /> 
+ <textarea readonly="readonly">
+    HTML code : <div id="showinfo2"> </div>
+</textarea>
+</div></div></div>
+<!--End info 2 -->
+<!-- info 3-->
+<div class='flip-card'>
+<div class='flip-card-inner'> 
+<div class='flip-card-front'><b class="pin">Language</b><br/><br/><div id="showinfo3"> </div></div>
+<div class='flip-card-back'> 
+<b class="pin">Source Code</b><br>
+<br /> <br /> 
+ <textarea readonly="readonly">
+    HTML code : <div id="showinfo3"> </div>
+</textarea>
+</div></div></div>
+<!--End info 3 -->
+<!-- info 4-->
+<div class='flip-card'>
+<div class='flip-card-inner'> 
+<div class='flip-card-front'><b  class="pin">App Version</b><div id="showinfo4"> </div></div>
+<div class='flip-card-back'> 
+<b class="pin">Source Code</b><br><br /> 
+ <textarea readonly="readonly">
+    HTML code : <div id="showinfo4"> </div>
+</textarea>
+</div></div></div>
+<!--End info 4 -->
+<!-- info 5-->
+<div class='flip-card'>
+<div class='flip-card-inner'> 
+<div class='flip-card-front'><b class="pin">Platform</b><br/><br/><div id="showinfo5"> </div></div>
+<div class='flip-card-back'> 
+<b class="pin">Source Code</b><br>
+ <br /> <br /> 
+ <textarea readonly="readonly">
+    HTML code : <div id="showinfo5"> </div>
+</textarea>
+</div></div></div>
+<!--End info 5 -->
+<!-- info 6-->
+<div class='flip-card'>
+<div class='flip-card-inner'> 
+<div class='flip-card-front'><b class="pin">Cookies Enabled</b><br/><div id="showinfo6"> </div></div>
+<div class='flip-card-back'> 
+<b class="pin">Source Code</b><br>
+<br /> <br /> 
+ <textarea readonly="readonly">
+    HTML code : <div id="showinfo6"> </div>
+</textarea>
+</div></div></div>
+<!--End info 6 -->
+<!-- info 7-->
+<div class='flip-card'>
+<div class='flip-card-inner'> 
+<div class='flip-card-front'><b class="pin">User Agent</b><div id="showinfo7"> </div></div>
+<div class='flip-card-back'> 
+<b class="pin">Source Code</b><br>
+<br /> <br /> 
+ <textarea readonly="readonly">
+       HTML code : <div id="showinfo7"> </div>
+</textarea>
+</div></div></div><br />
+<!--End info 7 -->
+ <!-- End info section -->
+ </div>
+  </div>
+</div>
+<!-- end column 3-->
+
+ <!-- start simulation js file -->
+<script src="js/binfo.js"></script>
+<script src="js/test.js"></script>
+<!-- End simulation js file -->
+</body>
+</html>
